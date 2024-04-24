@@ -67,6 +67,22 @@ public class RentalManageController {
         return "rental/index";
     }
  
+    @GetMapping("/rental/add")
+    public String add(Model model) {
+        List <Stock> stockList = this.stockService.findAll();
+        List <Account> accounts = this.accountService.findAll();
+ 
+        model.addAttribute("accounts", accounts);
+        model.addAttribute("stockList",stockList);
+        model.addAttribute("rentalStatus", RentalStatus.values());
+ 
+        if (!model.containsAttribute("rentalManageDto")) {
+            model.addAttribute("rentalManageDto", new RentalManageDto());
+        }
+ 
+        return "rental/add";
+    }
+    
     @PostMapping("/rental/add")
     public String save(@Valid @ModelAttribute RentalManageDto rentalManageDto, BindingResult result, RedirectAttributes ra) {
         try {
