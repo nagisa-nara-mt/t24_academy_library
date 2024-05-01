@@ -50,4 +50,4 @@
 - VSCodeにてブレークポイントを置きデバッグしたい場合
   - Dockerコンテナが起動中
   - docker/mt_library配下にある`launch.json`を、.vscode配下にコピー
-  - VSCodeの左側のタブから、"実行とデバッグ"を選択、`Debug (Attach) - Spring Boot`を選んで「デバッグの開始」ボタンを押下
+  - VSCodeの左側のタブから、"実行とデバッグ"を選択、`Debug (Attach) - Spring Boot`を選んで「デバッグの開始」ボタンを押下# test-java-2
